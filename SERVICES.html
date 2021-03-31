@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Your Local Urologist</title>
+		
+		<meta name="viewport" width="device-width" ,="" initial-scale="1.0">
+		
+		<meta name="author" content="Rajwinder">
+		
+		<meta name="description" content="This webpage is designed for the Urology Patients by Rajwinder. It is the Cis 145_Project, WebPublishing course in University of Fraser Valley">
+		<meta name="Keywords" content="UFV, University of Fraser Valley, Professor Lili Saghafi, Cis-145, Web Publishing, Rajwinder, HTML5, CSS3, local urologist,urology clinic,urology">
+		
+		<meta http-equiv="refresh" content="30">
+		
+		<meta name="generator" content="Notepad">
+		
+		<meta name="robot" content="all">
+	
+		
+
+		
+		<style>
+/* the '*' is the universal selecter this apply css on all of the page */
+*{box-sizing:border-box;
+Margin:0;
+padding:0;}
+
+
+body{font-family:sans-serif, georgia;
+	background-color:#cffffe;}
+/* the posotion is kept relative to the element occuring before and display is flex */
+
+/*  The z-index is used to specify content to be displayed in fron and in back*/
+.title {display:block;
+	position:fixed;
+	top:0;
+	z-index:1;
+	height:150px;
+	width:100%;
+	background-color:white;
+	padding-left:10%;}
+
+/* The letter-spacing rule is the space between the letters */
+.title h1 {font-size:60px;
+	padding:0;
+	margin:0;
+	margin-left:25%;
+	padding-top:4%;
+	font-family:permanent marker, sans-serif;
+	color:#00bcd4;
+	letter-spacing:3px;
+	background-color:white;
+	}
+
+.logo {position:fixed;
+	top:0;
+	right:0;
+	z-index:1;
+	margin-left:0;
+	padding-left:0;
+	margin-top:0px;
+	float:right;
+	overflow:hidden;}
+
+
+hr {width: 50%;
+    color: #7f7f7f;
+    background-color: #7f7f7f;
+    height: 3px;
+    margin: 60px 0 60px 0;
+}
+
+
+
+
+/*  this is the Hamburger menu */
+/*  Padding and margin are used as box model here*/
+.menu-wrap {
+position:fixed;
+top:0px;
+left:0;
+z-index:1;
+margin-right:0;
+padding-right:0;}
+/*Z-index is positive as consistent navigation area including this hamburger menu should be displayed in front of the other content*/
+.menu-wrap .toggler {
+position:absolute;
+top:0px;
+left:0;
+z-index:2;
+cursor:pointer;
+width:100px;
+height:100px;
+opacity:0;}
+/*  Absolute positioning is used to place the menu at the top-left of the page*/
+.menu-wrap .Hamburger{
+position:absolute;
+top:0px;
+left:0;
+z-index:1;
+width:150px;
+height:150px;
+padding:2rem;
+background-color:grey;
+display:flex;
+align-items:center;
+justify-content:center;}
+
+
+/*  hamburger line*/
+.menu-wrap .Hamburger > div {
+position:relative;
+width:100%;
+height:4px;
+background-color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* top and bottom hamburger line*/
+.menu-wrap .Hamburger > div:before,
+.menu-wrap .Hamburger > div:after
+{content:'';
+position:absolute;
+z-index:1;
+top:-20px;
+width:100%;
+height:4px;
+background: inherit;
+}
+
+/* top hamburger line*/
+.menu-wrap .Hamburger > div:after {
+top:20px;
+}
+
+.menu-wrap .toggler:checked + .Hamburger > div {
+background-color:#fff;}
+
+.menu-wrap .toggler:checked ~ .menu{visibility:visible;}
+
+.menu-wrap .toggler:checked ~ .menu > div {transform:scale(1);}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {opacity:1;}
+
+
+
+
+.menu-wrap .menu{
+position:fixed;
+top:0px;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+visibility:hidden;}
+
+
+
+.menu-wrap .menu > div {
+background-color:#f9f6f7;
+border-radius:50%;
+width:300vw;
+height:300vw;
+display:flex;
+flex:none;
+align-items:center;
+justify-content:center;
+transform:scale(0);
+}
+
+
+.menu-wrap .menu > div > div {
+text-align:center;
+max-width:90vw;
+max-height:100vh;
+opacity:0;}
+
+
+
+.menu ul li {
+list-style:none;
+color:grey;
+font-size:3rem;
+padding:1rem;}
+
+
+
+ a {
+
+text-decoration:none;
+}
+
+.services {position:relative;
+	top:150px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	background-image:url("services.jpeg");
+	background-position: center;
+ 	background-repeat: no-repeat;
+	background-attachment:fixed;
+  	background-size: cover;
+ 	position: relative;
+	z-index:-2;
+	opacity:0.5;}
+
+.servicesh3 {border:5px solid black;
+	position:relative;
+	padding:40px;
+	border-radius:30px;
+	z-index:10;
+	opacity:1;
+	font-size:50px;
+	color:black;
+	top:-50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:white;}
+
+
+.introduction {position:relative;
+		top:200px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		font-size:40px;
+		line-height:1.5;
+		padding:0 7% 0 7%;
+		color:grey;}
+
+
+.hr1 {position:relative;
+	top:200px;}
+
+
+@media only screen and (max-width:600px) {
+.container-1, .container-2, .container3, .container-4, .container-5, .container-6{ display:flex;
+ flex-direction:row;
+
+}}
+@media only screen and (min-width:800px) {
+.container-1, .container-2, .container3, .container-4, .container-5, .container-6{ display:flex;
+ flex-direction:row;
+
+}}
+
+
+
+.container-1, .container-2, .container3, .container-4, .container-5, .container-6 {display:flex;
+											flex-direction:column;}
+
+
+.box-1 {position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;}
+
+
+.box-2 p, h2{position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+
+.box-2 h2 {padding:20px 0 20px 0;
+		}
+
+.box-3 {position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;}
+
+.box-4 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-4 h2 {padding:20px 0 20px 0;
+		}
+
+
+.box-5, .box-7, .box-9, .box-11{position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;}
+
+.box-6 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-6 h2 {padding:20px 0 20px 0;
+		}
+
+.box-8 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-8 h2 {padding:20px 0 20px 0;
+		}
+.box-10 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-10 h2 {padding:20px 0 20px 0;
+		}
+.box-12 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-12 h2 {padding:20px 0 20px 0;
+		}
+
+footer {background-color:#aaaaaa;
+	position:relative;
+	top:400px;
+	height:1600px;}
+
+.address {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		
+		
+		line-height:2;
+		font-size:40px;
+		}
+
+.contact {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		padding:20px;
+		
+		line-height:2;
+		font-size:40px;}
+.Disclamier {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;
+		}
+.Developer {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;}
+
+.bookanappointmentbutton {
+	position:relative;
+	top:20px;
+	border-radius:30px;
+  	color: white;
+	background-color:grey;
+ 	padding: 16px 32px;
+	display:flex;
+  	text-align: center;
+  	text-decoration: none;
+	text-transform:uppercase;
+  	font-size: 40px;
+  	margin: 4px 2px;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+}
+
+.bookanappointmentbutton:hover {background-color:#bbbbbb;}
+/* This is the breadcrumb navigation*/
+.breadcrumb{padding:10px;
+  font-family:sans-serif;
+  width:100%;
+  font-size:40px;
+}
+.breadcrumb--items {
+  display:inline;
+}
+/*  the last-of-type pseudo state is used here it applies every css rule to all the elements except the last one*/
+/* the '\203a' is a special character used here for displaying a small sign */
+.breadcrumb--items:not(:last-of-type)::after {
+  content:'\203a';
+  margin:0 5px;
+  
+}
+/*  text-decoration is set to none for excluding the underline under the anchor tag*/
+.breadcrumb--link {
+  text-decoration:none;
+  color:grey;
+  
+}
+
+.breadcrumb--link--active {
+  color:black;
+}
+
+.breadcrumb--link:hover {
+  text-decoration:underline;
+}
+
+
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+		<!-- This specify the title of the webpage -->
+
+	<div class="title"><h1>YOUR UROLOGIST</h1></div>
+
+<!-- this is the hamburger menu -->
+
+	<div class="menu-wrap">
+
+	<input type="checkbox" class="toggler">
+		<div class="Hamburger">
+			<div>
+			</div>
+		</div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul><ul><a href="YOUR-UROLOGIST.html"><li>HOME</li></a>
+						<a href="Bookanappointment.html"><li>BOOK AN APPOINTMENT</li></a>
+						
+						<a href="Patientreviews.html"><li>PATIENT REVIEWS</li></a>
+						<a href="services.html"><li>OUR SERVICES</li></a>
+						<a href="findus.html"><li>FIND US</li></a>
+						<a href="contactus.html"><li>CONTACT US</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+	<div class="logo">
+		<figure>
+		<a href="YOUR-UROLOGIST.html"><img src="logo.png" alt="SERVICES" width="200px" height="150px"></a>
+		</figure>
+	</div>
+	
+
+
+<div class="services">
+
+<div class="servicesh3"><h3>SERVICES</h3><br></div>
+
+</div>
+
+
+<!--  Breadcrumb navigation html code -->
+<div class="breadcrumbnavigation" style="display:inline; position:relative;top:150px; width:100%;padding:0; margin:0;">
+
+		<ul class="breadcrumb">
+      <li class="breadcrumb--items">
+        <a href="YOUR-UROLOGIST.html" class="breadcrumb--link">HOME</a>
+      </li>
+
+	<li class="breadcrumb--items">
+        <a href="services.html" class="breadcrumb--link breadcrumb--link--active">SERVICES</a>
+      </li>
+    </ul>
+
+	</div>
+
+
+
+
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+<div class="introduction">
+	
+	<center><p>Regular kidney checkup will pervent many diseases in old age !<br>
+
+	<button class="bookanappointmentbutton" type="button"><a style="color:white; text-decoration:none;" href="Bookanappointment.html">Book an appointment</a></button>
+
+	</p></center>	
+	
+<p></p>
+
+</div>
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+
+<div class="container-1">
+	
+	<div class="box-1">
+	
+	<img src="STONE.png" alt="KIDNEYSTONE" width="100%" height="400px">
+	</div>
+	
+	<div class="box-2">
+	<h2 style="text-decoration:underline; font-size:50px;">KIDNEY STONE</h2>
+	<p style="padding:20px; line-height:1.5;">Kidney stones are medically known as renal Lithiasis. These are hard deposits which form inside the kidneys. The reason for the formation of kidney stones is the crystallization of minerals when the urine becomes concentrated. The stones are nothing but deposits of mineral and acid salts. They can be found in any part of the urinary tract which includes the kidneys and the bladder. The facility of  Kidney Stones removal is available at many clinics.
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+
+<div class="container-2">
+	
+	<div class="box-3">
+	
+	<img src="CANCER.jpg" alt="BLADDER CANCER" width="100%" height="400px">
+	</div>
+	
+	<div class="box-4">
+	<h2 style="text-decoration:underline; font-size:50px;">BLADDER CANCER</h2>
+	<p style="padding:20px; line-height:1.5;">The bladder is an organ in the lower pelvis which performs the function of collecting and storing the urine produced by the kidneys. Urinary Bladder Cancer is the condition in which the bladder cells begin to grow rapidly. Many people are struck with Bladder cancer,   being more common in industrialized countries. Although it has been found to happen in the younger age group, most of the cases have been seen in the older age group. The cancer is found majorly in the age group of 60 plus and has high chances of recurrence.Bladder cancer occurs when the epithelial cells of the bladder become malignant. The condition is characterized by the rapid growth of cells in the bladder . Bladder cancer is also known as transitional cell carcinoma or urothelial cell carcinoma.
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+
+<div class="container-3">
+	
+	<div class="box-5">
+	
+	<img src="PROSTATE.jpg" alt="PROSTATE" width="100%" height="400px">
+	</div>
+	
+	<div class="box-6">
+	<h2 style="text-decoration:underline; font-size:50px;">PROSTATE</h2>
+	<p style="padding:20px; line-height:1.5;">Trouble in starting the stream of urine, The problem of leakage of urine, The problem of dribbling of urine.The frequent visits to the bathroom slowly get more frequent and the same pattern starts showing up during the daytime. If the condition is left untreated, it could lead to an inability to hold urine even for a few minutes and lead to embarrassing situations. The condition sets in with advancing age and half of the men over 60 suffer from it. The condition is seen in 80 % men by the age of 85. It is also known as BPH.
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+<div class="container-4">
+	
+	<div class="box-7">
+	
+	<img src="DIALYSIS.PNG" alt="DIALYSIS" width="100%" height="400px">
+	</div>
+	
+	<div class="box-8">
+	<h2 style="text-decoration:underline; font-size:50px;">DIALYSIS</h2>
+	<p style="padding:20px; line-height:1.5;">
+        We already know that they are two bean-shaped structures that lie just below the rib cage. They are used in eliminating waste and fluids from our body. Besides this primary function, they are helpful in reducing the blood pressure of the individual and ensures that the bones retain their strength.Kidneys are also useful in keeping the right amount of minerals in the blood. The qunatuity of sodium and potassium in your blood is maintained by the kidney. They are also useful in the manufacturing of a hormone which helps the body in creating RBC. The kidneys might stop functioning as a result of some disease.
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+
+<div class="container-5">
+	
+	<div class="box-9">
+	
+	<img src="BLADDER.png" alt="bladderstone" width="100%" height="400px">
+	</div>
+	
+	<div class="box-10">
+	<h2 style="text-decoration:underline; font-size:50px;">BLADDER STONE</h2>
+	<p style="padding:20px; line-height:1.5;">
+       We already know that they are two bean-shaped structures that lie just below the rib cage. They are used in eliminating waste and fluids from our body. Besides this primary function, they are helpful in reducing the blood pressure of the individual and ensures that the bones retain their strength.Kidneys are also useful in keeping the right amount of minerals in the blood. The qunatuity of sodium and potassium in your blood is maintained by the kidney. They are also useful in the manufacturing of a hormone which helps the body in creating RBC. The kidneys might stop functioning as a result of some disease.
+
+	</p>
+
+	</div>
+
+</div>
+
+<!-- This is the horizontal line seperating different sections called the horizontal rule -->
+<div class="hr1"><center><hr noshade=""></center></div>
+
+
+<div class="container-6">
+	
+	<div class="box-11">
+	
+	<img src="stricture.png" alt="URETHERAL STRICTURE" width="100%" height="400px">
+	</div>
+	
+	<div class="box-12">
+	<h2 style="text-decoration:underline; font-size:50px;">URETHERAL STRICTURE</h2>
+	<p style="padding:20px; line-height:1.5;">
+    The urethra is the connecting structure between the bladder and the penis. The narrowing of the urethra is called Urethral Stricture.When scarring around the urethra narrows down the passageway of the urine, it is called urethral stricture.It is generally caused due to infection, injury or inflammation. The condition is seen much more in men than in women. The scarring may be seen anywhere between the bladder and the penis tip. It causes reduced urine flow and increases the urge to frequently urinate. The stricture can lead to UTI, urinary retention and damage to the kidneys.
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade=""></center></div>
+
+<!--  the footer area starts here -->
+
+<footer>
+
+<!--  Image mapping for social media -->
+		<map name="socialmedia">
+  		<area shape="rect" coords="10,20,60,80" alt="instagram" href="https://www.instagram.com/accounts/emailsignup/?hl=en">
+ 		<area shape="rect" coords="80,20,125,80" alt="facebook" href="https://www.facebook.com/">
+  		<area shape="rect" coords="155,20,190,80" alt="twitter" href="https://mobile.twitter.com/i/flow/signup">
+		</map>
+
+		
+		<center><img class="socialmedia" src="socialmedia.png" alt="Instagram-Facebook-twitter" usemap="#socialmedia" width="200px" height="100px"></center>
+		
+		<center>
+			<div class="address"><p>Address:<br>
+				GT ROAD FEROZPUR<br>
+				NEAR NESTLE, 
+				MOGA</p>
+			</div>
+		</center>
+
+
+
+		<center>
+			<div class="contact">
+				<p>Contact: <br>E-mail:<a style="text-decoration:none;color:black;" href="mailto:mailto:RAJWINDERUFV@gmail.com">RAJWINDERUFV@gmail.com</a><br>
+				Call us:XXXXX XXXXX</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Disclamier">
+				<p>Disclamier:<br>
+				“This is a project of CIS 145 , Web Publishing Course in UFV, Instructed and requested by Professor Lili Saghafi"</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Developer">
+				<p>Designed and Developed by:<br>
+				RAJWINDER</p>
+			</div>
+		</center>
+		
+<!--this is the accessibility logo provided with an external hyperlink -->
+		<center>
+			<div>
+				<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"><img src="Accessibilitylogo.png" alt="accessibility"></a>
+			</div>
+		</center>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

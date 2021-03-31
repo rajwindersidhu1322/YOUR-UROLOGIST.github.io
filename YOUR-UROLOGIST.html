@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Your Urologist</title>
+		
+		<meta name="viewport" width="device-width" ,="" initial-scale="1.0">
+		
+		<meta name="author" content="Rajwinder">
+		
+		<meta name="description" content="This webpage is designed for the Urology Patients by Rajwinder. It is the Cis 145_Project, WebPublishing course in University of Fraser Valley">
+		<meta name="Keywords" content="UFV, University of Fraser Valley, Professor Lili Saghafi, Cis-145, Web Publishing, Rajwinder, HTML5, CSS3, local urologist,urology clinic,urology">
+		
+		<meta http-equiv="refresh" content="30">
+		
+		<meta name="generator" content="Notepad">
+		
+		<meta name="robot" content="all">
+	
+		
+
+		
+		<style>
+/* the '*' is the universal selecter this apply css on all of the page */
+*{box-sizing:border-box;
+Margin:0;
+padding:0;}
+
+
+body{font-family:sans-serif, georgia;
+	background-color:#cffffe;}
+/* the posotion is kept relative to the element occuring before and display is flex */
+.covid-19{height:200px;
+	display:flex;
+	position:relative;
+	top:150px;
+	left:0;
+	align-items:center;
+	justify-content:center;
+	background-color:#01c5c4;
+	color:white;
+	font-size:40px;}
+
+.complaince{padding-left:10%;
+	padding-right:10%;}
+/* The z-index is used to specify content to be displayed in front and in back*/
+.title {display:block;
+	position:fixed;
+	top:0;
+	z-index:1;
+	height:150px;
+	width:100%;
+	background-color:white;
+	padding-left:10%;}
+
+.title h1 {font-size:60px;
+	padding:0;
+	margin:0;
+	margin-left:16%;
+	padding-top:4%;
+	font-family:permanent marker, sans-serif;
+	color:#00bcd4;
+	letter-spacing:3px;
+	background-color:white;}
+
+@media only screen and (min-width:1000px) {
+.title h1{margin-left:25%;
+	padding-top:2.5%;}
+
+.complaince{font-size:30px;}
+
+.covid-19{height:100px;}
+
+
+
+
+}
+
+@media only screen and (max-width:800px) {
+.title h1{margin-left:16%;
+	padding-top:4%;}
+
+.complaince{font-size:40px;}
+
+.covid-19{height:200px;}
+
+
+}
+
+
+/* flex display is used to make the website responsive and align the items/content */
+/*  align-items is used along with the display:flex; to make items center align */
+.bookanappointment p {position:relative;
+		display:flex;
+  	text-align: center;
+  	text-decoration: none;
+	font-size:40px;
+	color:grey;
+	margin-top:50px;}
+
+/* z-index is used in negative as this part of the website should be displayed behind the consistent navigation area */
+.bookanappointment {background-color:white;
+		border-radius:20px;
+		padding:2%;
+		margin:10%;
+		z-index:-2;}
+
+/*Css transition is used for giving a soothing effect to the button's hover st*/
+.bookanappointmentbutton {
+	position:relative;
+	top:20px;
+	border-radius:30px;
+  	color: white;
+	background-color:grey;
+ 	padding: 16px 32px;
+	display:flex;
+  	text-align: center;
+  	text-decoration: none;
+	text-transform:uppercase;
+  	font-size: 40px;
+  	margin: 4px 2px;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+/* the hover is a pseudo css rule */
+.bookanappointmentbutton:hover {background-color:#bbbbbb;}
+
+/*overflow is hidden here due to accessibility concerns*/
+.logo {position:fixed;
+	top:0;
+	right:0;
+	margin-left:0;
+	padding-left:0;
+	margin-top:0px;
+	float:right;
+	overflow:hidden;
+	z-index:2;}
+
+/*background-color is specified using hexadecimal code for colors */
+hr {width: 50%;
+    color: #7f7f7f;
+    background-color: #7f7f7f;
+    height: 3px;
+    margin: 60px 0 60px 0;
+}
+
+
+.landingpage {margin:0;
+padding:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Padding and margin are used as box model here*/
+
+/*Hamburger menu */
+.menu-wrap {
+position:fixed;
+top:0px;
+left:0;
+z-index:1;
+margin-right:0;
+padding-right:0;}
+
+/*index is positive as consistent navigation area including this hamburger menu should be displayed in front of the other content*/
+.menu-wrap .toggler {
+position:absolute;
+top:0px;
+left:0;
+z-index:2;
+cursor:pointer;
+width:100px;
+height:100px;
+opacity:0;}
+
+.menu-wrap .Hamburger{
+position:absolute;
+top:0px;
+left:0;
+z-index:1;
+width:150px;
+height:150px;
+padding:2rem;
+background-color:grey;
+display:flex;
+align-items:center;
+justify-content:center;}
+
+
+/*  hamburger line*/
+.menu-wrap .Hamburger > div {
+position:relative;
+width:100%;
+height:4px;
+background-color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* top and bottom hamburger line*/
+.menu-wrap .Hamburger > div:before,
+.menu-wrap .Hamburger > div:after
+{content:'';
+position:absolute;
+z-index:1;
+top:-20px;
+width:100%;
+height:4px;
+background: inherit;
+}
+
+/* top hamburger line*/
+.menu-wrap .Hamburger > div:after {
+top:20px;
+}
+
+.menu-wrap .toggler:checked + .Hamburger > div {
+background-color:#fff;}
+
+.menu-wrap .toggler:checked ~ .menu{visibility:visible;}
+
+.menu-wrap .toggler:checked ~ .menu > div {transform:scale(1);}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {opacity:1;}
+
+
+
+
+.menu-wrap .menu{
+position:fixed;
+top:0px;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+visibility:hidden;}
+
+
+
+.menu-wrap .menu > div {
+background-color:#f9f6f7;
+border-radius:50%;
+width:300vw;
+height:300vw;
+display:flex;
+flex:none;
+align-items:center;
+justify-content:center;
+transform:scale(0);
+}
+
+
+.menu-wrap .menu > div > div {
+text-align:center;
+max-width:90vw;
+max-height:100vh;
+opacity:0;}
+
+
+
+.menu ul li {
+list-style:none;
+color:grey;
+font-size:3rem;
+padding:1rem;}
+
+
+
+ a {
+
+text-decoration:none;
+}
+
+.urologist {display:flex;
+		flex-direction:column;}
+
+/* Now every element is positioned relative to each other so that the configuration could change with the change in device dimensions.*/
+
+
+.img {position:relative;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			color:grey;
+			background-color:white;
+			margin:10%;
+			line-height:1.5;
+			font-size:40px;
+			padding:2%;
+			border-radius:20px 20px 0 0 ;
+			z-index:-2;
+			margin-top:0;
+			margin-bottom:0;
+			padding-top:6%;
+			padding-left:20%;
+			padding-right:20%;}
+
+
+/* Line-height specify the space between the lines, we can say this as paragraphy spacing in simple words*/
+
+.blockquote {position:relative;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			color:grey;
+			background-color:white;
+			margin:10%;
+			line-height:1.5;
+			font-size:40px;
+			padding:2%;
+			border-radius:0 0 20px 20px;
+			z-index:-2;
+			margin-top:0;
+	}
+
+.services {margin-bottom:50px;}
+
+
+.desc {position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:grey;
+	background-color:white;
+	font-size:40px;
+	margin-top:0;}
+/* this gallery is floated to left for accessibility concerns, making the website responsive*/
+.gallery {float:left;
+	margin:0 0.7% 6% 0.7%;}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+
+.review {position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:grey;
+	background-color:white;
+	font-size:40px;
+	margin:10%;
+	padding:5%;
+	border-radius:20px;}
+
+
+.guidelinevideo {position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:grey;
+	background-color:white;
+	font-size:40px;
+	margin:10%;
+	padding:2%;
+	border-radius:20px;
+	}
+
+.guidelinevideo p {position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:grey;
+	background-color:white;
+	font-size:40px;
+	margin:5%;
+	
+	border-radius:20px;
+	}
+
+.guidelinevideo iframe {position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:grey;
+	background-color:white;
+	font-size:40px;
+	margin:10%;
+	margin-bottom:0%;
+	padding:2%;
+	border-radius:20px;
+	}
+
+footer {background-color:#aaaaaa;
+	position:relative;
+	top:400px;
+	height:1600px;}
+
+.address {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		
+		
+		line-height:2;
+		font-size:40px;
+		}
+
+.contact {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		padding:20px;
+		
+		line-height:2;
+		font-size:40px;}
+.Disclamier {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;
+		}
+.Developer {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;}
+
+/*This is the breadcrumb navigation*/
+.breadcrumbnavigation {position:relative;
+			top:150px;
+			height:50px;
+			background-color:#cffffe;
+			float:left;
+			display:flex;
+			font-size:30px;
+			width:100%;}
+.breadcrumb{padding:10px;
+  font-family:sans-serif;}
+.breadcrumb--items {
+  display:inline;
+padding:40% 0 10% 20%;}
+
+/* the last-of-type pseudo state is used here it applies every css rule to all the elements except the last one*/
+/* the '\203a' is a special character used here for displaying a small sign */
+.breadcrumb--items:not(:last-of-type)::after {
+  content:'\203a';
+  margin:0 5px;
+  
+}
+/*text-decoration is set to none for excluding the underline under the anchor tag*/
+.breadcrumb--link {
+  text-decoration:none;
+  color:grey;
+}
+
+.breadcrumb--link--active {
+  color:black;
+}
+
+.breadcrumb--link:hover {
+  text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</style>
+	</head>
+
+<body>
+	<!This is the covid-19 complaince line -->
+	<div>
+
+		<div class="covid-19">
+
+		<center><p class="complaince">Our practice is now open and resuming a modified schedule taking into consideration all the government guidelines.
+		</p></center>
+	
+
+
+	</div>
+		<! This specify the title of the webpage -->
+
+		<div class="title"><h1>YOUR UROLOGIST</h1></div>
+
+<!this is the hamburger menu -->
+
+		<div class="menu-wrap">
+
+	<input type="checkbox" class="toggler">
+		<div class="Hamburger">
+			<div>
+			</div>
+		</div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<a href="Bookanappointment.html"><li>BOOK AN APPOINTMENT</li></a>
+						
+						<a href="Patientreviews.html"><li>PATIENT REVIEWS</li></a>
+						<a href="services.html"><li>OUR SERVICES</li></a>
+						<a href="findus.html"><li>FIND US</li></a>
+						<a href="contactus.html"><li>CONTACT US</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+	<div class="logo">
+		<figure>
+		<a href="YOUR-UROLOGIST.html"><img src="logo.png" alt="HOME" width="200px" height="150px"></a>
+		</figure>
+	</div>
+	
+</div>
+
+<!Breadcrumb navigation html code -->
+	<div class="breadcrumbnavigation">
+
+		<ul class="breadcrumb">
+      <li class="breadcrumb--items">
+        <a href="YOUR-UROLOGIST.html" class="breadcrumb--link breadcrumb--link--active">HOME</a>
+      </li>
+    </ul>
+	</div>
+
+	<div class="landingpage">
+		<figure>
+		<img src="UROLOGY.jpg" alt="UROLOGY" width="100%" height="1000vh">
+		</figure>
+	</div>
+
+
+<!This is the horizontal line seperating different sections called the horizontal rule -->
+
+	<center><hr noshade=""></center>
+	
+
+
+
+
+	<div class="bookanappointment">
+
+		<p>Suffering from urinary problems,bladder, urethra, ureters, kidneys, and adrenal glands.? Leave your concerns here and we will contect you soon.</p>
+		<center>	<button class="bookanappointmentbutton" type="button"><a style="color:white; text-decoration:none;" href="Bookanappointment.html">Book an appointment</a></button></center>
+
+	
+
+	</div>
+<center><hr noshade=""></center>
+	<div class="img">
+	<figure>
+	<img src="urologist.jpeg" alt="urologist" height="500vh" width="80%">
+	<figcaption style="background-color:white; width:80%; color:grey;font-size:40px;padding:2%;display:flex; justify-content:center;align-items:center;margin:0 10% 0 10%;">Dr. Ravinder Sharma</figcaption>
+	</figure>
+
+<!This is a quoted text by someone written in blockquote elemet, the cite attribute provides the source of the quoted text -->
+
+	<blockquote cite="./Perfect Smile_Dental Clinic_files/saved_resource">Hello!
+
+	I AM YOUR LOCAL UROLOGIST AVAILBLE 24 HOURS ON FLOOR .ANY KIND OF URINARY ISSUES .KINDLY CONTECT AS SOON AS POSSIBLE AS IT CAN HARM YOUR KIDNEY.DONT SHY TO TELL YOUR ISSUES.
+
+	
+</blockquote>
+	
+	
+	</div>
+
+
+<center><hr noshade=""></center>
+
+
+<div class="services">
+
+
+<h1 style="z-index:-2;position:relative;display:flex;justify-content:center;align-items:center;color:grey;">Our Services</h1><h1>
+
+
+</h1></div>
+
+<This is an CSS Image Gallery -->
+
+<div class="gallery">
+  <a target="_blank" href="services.html">
+    <img src="STONE.png" alt="Kidney Stone" width="480" height="400">
+  </a>
+  <div class="desc">Kidney Stone</div>
+</div>
+
+
+
+<div class="gallery">
+  <a target="_blank" href="services.html">
+    <img src="djstenting.jpg" alt="DJ STENTING" width="480" height="400">
+  </a>
+  <div class="desc">DJ STENTING</div>
+</div>
+
+
+
+<div class="gallery">
+  <a target="_blank" href="services.html">
+    <img src="URINARYRETENTION.jpg" alt="Bridges" width="480" height="400">
+  </a>
+  <div class="desc">URINARY RETENTION</div>
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="services.html">
+    <img src="NEPHRECTOMY.jpg" alt="NEPHRECTOMY" width="480" height="400">
+  </a>
+  <div class="desc">NEPHRECTOMY</div>
+</div>
+
+
+
+<div class="gallery">
+  <a target="_blank" href="services.html">
+    <img src="TURP.jpg" alt="TURP" width="480" height="400">
+  </a>
+  <div class="desc">TURP</div>
+</div>
+
+
+
+<div class="gallery">
+  <a target="_blank" href="services.html">
+    <img src="URETHRO.jpg" alt="URETROTOMY" width="480" height="400">
+  </a>
+  <div class="desc">URETROTOMY</div>
+</div>
+
+<center><hr noshade=""></center>
+
+
+<div class="review">
+
+	<div class="reviewline"> 
+	
+	<p>Our comprehensive services allow you to perfectly match your needs, lifestyle, and goals. Our comfortable office, compassionate team, and minimally-invasive treatments will help you feel completely at ease. tell us about your experience using the button down below.</p>
+	
+	<center><button class="bookanappointmentbutton" type="button"><a style="color:white; text-decoration:none;" href="Patientreviews.html">Patient reviews</a></button></center>
+
+	</div>
+
+</div>
+
+<center><hr noshade=""></center>
+
+<div class="guidelinevideo">
+
+	<div class="guidelinevideoline">
+				<p>THESE DAYS LOT OF PEOPLE FACING UROLOGY PROBLEMS CAN CONTACT US WITH THIS NEW WAY.
+</p>
+
+
+<! this is a icon used as a link to a youtube video -->
+				<center><iframe width="600px" height="506px" style="padding-top:50px;" src="inVTgf_4BZA.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></center>
+	
+	</div>
+</div>
+
+<!the footer area starts here -->
+
+<footer>
+
+<!--Image mapping for social media -->
+		<map name="socialmedia">
+  		<area shape="rect" coords="10,20,60,80" alt="instagram" href="https://www.instagram.com/accounts/emailsignup/?hl=en">
+ 		<area shape="rect" coords="80,20,125,80" alt="facebook" href="https://www.facebook.com/">
+  		<area shape="rect" coords="155,20,190,80" alt="twitter" href="https://mobile.twitter.com/i/flow/signup">
+		</map>
+
+		
+		<center><img class="socialmedia" src="socialmedia.png" alt="Instagram-Facebook-twitter" usemap="#socialmedia" width="200px" height="100px"></center>
+		
+		<center>
+			<div class="address"><p>Address:<br>
+				GT ROAD FEROZPUR<br>
+				NEAR NESTLE, 
+				MOGA</p>
+			</div>
+		</center>
+
+
+
+		<center>
+			<div class="contact">
+				<p>Contact: <br>E-mail:<a style="text-decoration:none;color:black;" href="mailto:mailto:RAJ@gmail.com">RAJWINDERUFV@gmail.com</a><br>
+				Call us:XXXXX XXXXX</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Disclamier">
+				<p>Disclamier:<br>
+				“This is a project of CIS 145 , Web Publishing Course in UFV, Instructed and requested by Professor Lili Saghafi"</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Developer">
+				<p>Designed and Developed by:<br>
+				RAJWINDER-300176462</p>
+			</div>
+		</center>
+		
+<!-- The accessibility logo provided with an external hyperlink -->
+		<center>
+			<div>
+				<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank"><img src="Accessibilitylogo.png" alt="accessibility"></a>
+			</div>
+		</center>
+</footer>
+</body></html>
